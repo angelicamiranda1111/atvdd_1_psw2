@@ -1,0 +1,29 @@
+# 10) Faça um programa que leia um número indeterminado de valores, correspondentes a notas, encerrando a entrada de dados quando for informado um valor igual a -1 (que não deve ser armazenado). Após esta entrada de dados, faça:
+# a. Mostre a quantidade de valores que foram lidos;
+# b. Exiba todos os valores na ordem em que foram informados, um ao lado do outro;
+# c. Exiba todos os valores na ordem inversa à que foram informados, um abaixo do outro;
+
+# Inicialize uma lista para armazenar as notas
+notas = []
+contador = 0
+
+# Loop para ler as notas
+while True:
+    nota = float(input("Digite uma nota (-1 para encerrar): "))
+    if nota == -1:
+        break
+    notas.append(nota)
+    contador += 1
+
+# a. Mostre a quantidade de valores que foram lidos
+print(f"Quantidade de valores lidos: {contador}")
+
+# b. Exiba todos os valores na ordem em que foram informados, um ao lado do outro
+print("Valores na ordem original:", end=" ")
+for nota in notas:
+    print(nota, end=" ")
+
+# c. Exiba todos os valores na ordem inversa à que foram informados, um abaixo do outro
+print("\nValores na ordem inversa:")
+for nota in reversed(notas):
+    print(nota)

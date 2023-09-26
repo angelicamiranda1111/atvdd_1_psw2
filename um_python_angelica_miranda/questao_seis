@@ -1,0 +1,15 @@
+# 6) Faça um programa que leia 5 números e informe o maior número.
+
+# Inicialize uma variável para armazenar o maior número com um valor mínimo
+maior_numero = float('-inf')
+
+# Loop para ler os 5 números
+for i in range(5):
+    numero = float(input(f"Digite o {i+1}º número: "))
+    
+    # Verifique se o número lido é maior que o número armazenado na variável 'maior_numero'
+    if numero > maior_numero:
+        maior_numero = numero
+
+# Exiba o maior número
+print(f"O maior número entre os digitados é: {maior_numero}")
